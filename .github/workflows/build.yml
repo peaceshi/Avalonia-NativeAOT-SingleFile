@@ -21,9 +21,8 @@ jobs:
             curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libHarfBuzzSharp-10.0.26100.0.7z
             curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libSkiaSharp-2.88.9-10.0.26100.0.7z
             7z e ./*.7z -y -o"."
-            rm -rf ./*.7z
             ls -al
-            mv * ../Avalonia-NativeAOT-SingleFile/native/
+            mv *.lib *.pdb ../Avalonia-NativeAOT-SingleFile/native/
 
       - name: Build
         working-directory: ${{github.workspace}}
