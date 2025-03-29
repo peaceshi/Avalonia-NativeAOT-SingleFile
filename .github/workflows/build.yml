@@ -23,7 +23,7 @@ jobs:
             7z e ./*.7z -y -o"."
             rm -rf ./*.7z
             ls -al
-            mv ./ ../Avalonia-NativeAOT-SingleFile/native/
+            mv * ../Avalonia-NativeAOT-SingleFile/native/
 
       - name: Build
         working-directory: ${{github.workspace}}
