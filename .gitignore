@@ -1,0 +1,8 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+Avalonia-NativeAOT-SingleFile.sln.DotSettings.user
+Avalonia-NativeAOT-SingleFile/native/*.lib
+Avalonia-NativeAOT-SingleFile/native/*.pdb

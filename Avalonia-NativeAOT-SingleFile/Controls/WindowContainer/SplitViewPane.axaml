@@ -1,0 +1,25 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia_NativeAOT_SingleFile.Controls.WindowContainer.SplitViewPane"
+             xmlns:viewModels="using:Avalonia_NativeAOT_SingleFile.ViewModels"
+             x:DataType="viewModels:MainWindowViewModel">
+    <DockPanel LastChildFill="True" Background="Transparent" HorizontalAlignment="Left"
+               VerticalAlignment="Stretch">
+        <Button Classes="IconButton" Command="{Binding TogglePaneCommand}"
+                Content="{StaticResource GlobalNavButton}"
+                DockPanel.Dock="Top" />
+        <StackPanel DockPanel.Dock="Bottom">
+            <Rectangle Name="SplitRectangle" Fill="{DynamicResource WindowContainerContentBackgroundBrush}"
+                       Width="{Binding SplitRectangleWidth}" Height="1" />
+            <Button Classes="IconButton" Content="{StaticResource Settings}" />
+        </StackPanel>
+        <StackPanel>
+            <Button Classes="IconButton" Command="{Binding NavigateToHomeCommand}"
+                    Content="{StaticResource Home}" />
+            <Button Classes="IconButton" Content="{StaticResource Info}" Command="{Binding ShowDialogCommand}" />
+        </StackPanel>
+    </DockPanel>
+</UserControl>

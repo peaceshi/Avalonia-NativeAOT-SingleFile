@@ -1,0 +1,54 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="using:Avalonia_NativeAOT_SingleFile.ViewModels"
+        x:DataType="viewModels:MainWindowViewModel">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+    <!-- Add Styles Here -->
+    <Style Selector="StackPanel.WindowContainerTitleBarStyle">
+        <Setter Property="Background" Value="{DynamicResource WindowContainerTitleBarBackgroundBrush}" />
+        <Setter Property="Height" Value="{Binding TitleBarHeight}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Orientation" Value="Horizontal" />
+    </Style>
+    <Style Selector="Panel.WindowContainerContentStyle">
+        <Setter Property="Background" Value="{DynamicResource WindowContainerContentBackgroundBrush}" />
+    </Style>
+    <Style Selector="Window.MainWindowStyle">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="{Binding TitleBarHeight}" />
+        <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
+        <Setter Property="MinHeight" Value="{Binding MinWindowHeight }" />
+        <Setter Property="MinWidth" Value="{Binding MinWindowWidth }" />
+        <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
+        <Setter Property="SystemDecorations" Value="BorderOnly" />
+        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />
+        <Setter Property="WindowStartupLocation" Value="CenterScreen" />
+    </Style>
+    <Style Selector="Window.AboutWindowStyle">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="48" />
+        <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
+        <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
+        <Setter Property="CanResize" Value="False" />
+        <Setter Property="SystemDecorations" Value="BorderOnly" />
+        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />
+        <Setter Property="WindowStartupLocation" Value="CenterScreen" />
+    </Style>
+    <Style Selector="Button.IconButton">
+        <Setter Property="FontFamily" Value="Segoe Fluent Icons" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Margin" Value="8" />
+    </Style>
+    <Style Selector="SplitView.WindowContainerSplitViewStyle">
+        <Setter Property="IsPaneOpen" Value="{Binding IsPaneOpen}" />
+        <Setter Property="DisplayMode" Value="CompactInline" />
+        <Setter Property="CompactPaneLength" Value="{Binding TitleBarHeight}" />
+        <Setter Property="OpenPaneLength" Value="{Binding OpenPaneLength}" />
+        <Setter Property="PaneBackground" Value="Transparent" />
+    </Style>
+</Styles>

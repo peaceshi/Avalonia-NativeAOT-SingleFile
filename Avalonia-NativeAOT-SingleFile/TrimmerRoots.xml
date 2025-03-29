@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linker>
+    <assembly fullname="Xaml.Behaviors">
+        <type fullname="Avalonia.Xaml.Interactions.Core.EventTriggerBehavior" preserve="all"/>
+    </assembly>
+</linker>

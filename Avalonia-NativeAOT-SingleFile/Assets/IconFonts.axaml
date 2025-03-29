@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key='GlobalNavButton'>&#xE700;</system:String>
+    <system:String x:Key='Settings'>&#xE713;</system:String>
+    <system:String x:Key='Back'>&#xE72B;</system:String>
+    <system:String x:Key='Home'>&#xE80F;</system:String>
+    <system:String x:Key='Info'>&#xE946;</system:String>
+</ResourceDictionary>

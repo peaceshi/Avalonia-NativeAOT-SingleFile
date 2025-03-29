@@ -1,0 +1,27 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="400" Height="300"
+        x:Class="Avalonia_NativeAOT_SingleFile.Views.AboutWindow"
+        xmlns:viewModels="using:Avalonia_NativeAOT_SingleFile.ViewModels"
+        x:DataType="viewModels:AboutWindowViewModel"
+        Classes="AboutWindowStyle">
+    <Design.DataContext>
+        <viewModels:AboutWindowViewModel />
+    </Design.DataContext>
+    <Panel>
+        <DockPanel LastChildFill="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="8">
+            <Panel Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Binding Title}" />
+            </Panel>
+            <Button Command="{Binding ConfirmCommand}" Margin="16" VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right" Content="OK" DockPanel.Dock="Bottom" />
+            <StackPanel Spacing="4" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <TextBlock Text="This is a sample application." />
+                <TextBlock Text="It is built using Avalonia and NativeAOT." />
+            </StackPanel>
+        </DockPanel>
+    </Panel>
+</Window>

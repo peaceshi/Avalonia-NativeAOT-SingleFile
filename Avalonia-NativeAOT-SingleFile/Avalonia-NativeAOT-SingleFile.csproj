@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>13</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Label="ApplicationConfiguration">
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <ApplicationIcon>Assets\avalonia-logo.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <PropertyGroup Label="AvaloniaConfiguration">
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <PropertyGroup Label="PublishConfiguration" Condition="'$(Configuration)'=='Release'">
+        <TrimMode>full</TrimMode>
+        <PublishAot>true</PublishAot>
+        <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+    </PropertyGroup>
+
+    <ItemGroup Label="TrimmerRootConfiguration" Condition="'$(Configuration)'=='Release'">
+        <TrimmerRootAssembly Include="Avalonia.Themes.Fluent"/>
+        <!--        <TrimmerRootAssembly Include="Xaml.Behaviors"/>-->
+        <!--        <TrimmerRootDescriptor Include="TrimmerRoots.xml"/>-->
+    </ItemGroup>
+
+    <ItemGroup Label="ImportLib">
+        <DirectPInvoke Include="libHarfBuzzSharp"/>
+        <NativeLibrary Include="native\libHarfBuzzSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <DirectPInvoke Include="libSkiaSharp"/>
+        <NativeLibrary Include="native\libSkiaSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <DirectPInvoke Include="av_libglesv2"/>
+        <NativeLibrary Include="native\av_libglesv2.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Models\"/>
+        <AvaloniaResource Include="Assets\**"/>
+    </ItemGroup>
+
+    <ItemGroup Label="PackageReferences">
+        <PackageReference Include="Avalonia" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
+        <!--        <PackageReference Include="HotAvalonia" Version="3.0.0">-->
+        <!--            <PrivateAssets>all</PrivateAssets>-->
+        <!--            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
+        <!--        </PackageReference>-->
+        <!--        <PackageReference Include="HotAvalonia.Extensions" Version="3.0.0">-->
+        <!--            <PrivateAssets>all</PrivateAssets>-->
+        <!--            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
+        <!--        </PackageReference>-->
+        <PackageReference Include="PolySharp" Version="1.15.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="VC-LTL" Version="5.2.1"/>
+        <PackageReference Include="Xaml.Behaviors" Version="11.2.0.14"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MessengerGenerator\MessengerGenerator.csproj" OutputItemType="Analyzer"
+        />
+        <ProjectReference Include="..\ViewLocatorGenerator\ViewLocatorGenerator.csproj" OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="false"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Views\WelcomePage.axaml.cs">
+            <DependentUpon>WelcomePage.axaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+    </ItemGroup>
+</Project>

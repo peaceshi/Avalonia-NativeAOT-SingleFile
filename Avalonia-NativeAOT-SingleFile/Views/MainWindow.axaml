@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:controls="clr-namespace:Avalonia_NativeAOT_SingleFile.Controls"
+        xmlns:windowContainer="clr-namespace:Avalonia_NativeAOT_SingleFile.Controls.WindowContainer"
+        x:Class="Avalonia_NativeAOT_SingleFile.Views.MainWindow"
+        xmlns:viewModels="using:Avalonia_NativeAOT_SingleFile.ViewModels"
+        x:DataType="viewModels:MainWindowViewModel"
+        Classes="MainWindowStyle">
+    <Design.DataContext>
+        <viewModels:MainWindowViewModel />
+    </Design.DataContext>
+
+    <!-- TODO: Behaviors not supported NativeAOT. -->
+    <!-- <Interaction.Behaviors> -->
+    <!--     <EventTriggerBehavior EventName="Activated"> -->
+    <!--         <InvokeCommandAction Command="{Binding WindowActivatedCommand, Mode=OneTime}" /> -->
+    <!--     </EventTriggerBehavior> -->
+    <!--     <EventTriggerBehavior EventName="Deactivated"> -->
+    <!--         <InvokeCommandAction Command="{Binding WindowDeactivatedCommand, Mode=OneTime}" /> -->
+    <!--     </EventTriggerBehavior> -->
+    <!-- </Interaction.Behaviors> -->
+
+    <Panel>
+        <controls:AcrylicBorder />
+        <DockPanel LastChildFill="True">
+            <windowContainer:TitleBar DockPanel.Dock="Top" />
+            <windowContainer:SplitView />
+        </DockPanel>
+    </Panel>
+</Window>

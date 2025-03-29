@@ -1,0 +1,30 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModel="clr-namespace:Avalonia_NativeAOT_SingleFile.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia_NativeAOT_SingleFile.Views.HomePage"
+             x:DataType="viewModel:HomePageViewModel">
+    <Design.DataContext>
+        <viewModel:HomePageViewModel />
+    </Design.DataContext>
+    <StackPanel Spacing="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   FontSize="16"
+                   FontWeight="SemiBold"
+                   Text="{Binding Title}"
+                   TextWrapping="Wrap" />
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextAlignment="Justify"
+                   FontSize="16"
+                   FontFamily="Segoe Fluent Icons"
+                   TextWrapping="Wrap">
+            <Run Text="Press" />
+            <Run Text="{StaticResource Back}" />
+            <Run Text=" to Welcome Page." />
+        </TextBlock>
+    </StackPanel>
+</UserControl>

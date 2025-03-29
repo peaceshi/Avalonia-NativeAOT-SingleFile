@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia-NativeAOT-SingleFile", "Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile.csproj", "{B93626BC-1D77-4387-B749-46A7DABC0568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewLocatorGenerator", "ViewLocatorGenerator\ViewLocatorGenerator.csproj", "{49F7CD2F-7BD8-4E13-9FEA-A6C0842275C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerGenerator", "MessengerGenerator\MessengerGenerator.csproj", "{CE91F755-21E5-43DF-840E-94F0ED8102E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B93626BC-1D77-4387-B749-46A7DABC0568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93626BC-1D77-4387-B749-46A7DABC0568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93626BC-1D77-4387-B749-46A7DABC0568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93626BC-1D77-4387-B749-46A7DABC0568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F7CD2F-7BD8-4E13-9FEA-A6C0842275C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F7CD2F-7BD8-4E13-9FEA-A6C0842275C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F7CD2F-7BD8-4E13-9FEA-A6C0842275C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F7CD2F-7BD8-4E13-9FEA-A6C0842275C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE91F755-21E5-43DF-840E-94F0ED8102E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE91F755-21E5-43DF-840E-94F0ED8102E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE91F755-21E5-43DF-840E-94F0ED8102E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE91F755-21E5-43DF-840E-94F0ED8102E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
