@@ -20,7 +20,9 @@ jobs:
             curl -OL https://github.com/2ndlab/ANGLE.Static/releases/download/v1.2.0/av_libglesv2-10.0.26100.0.7z
             curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libHarfBuzzSharp-10.0.26100.0.7z
             curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libSkiaSharp-2.88.9-10.0.26100.0.7z
-            7z e ./*.7z -y -o"."
+            7z e av_libglesv2-10.0.26100.0.7z -y
+            7z e libHarfBuzzSharp-10.0.26100.0.7z -y
+            7z e libSkiaSharp-2.88.9-10.0.26100.0.7z -y
             ls -al
             mv *.lib *.pdb ../Avalonia-NativeAOT-SingleFile/native/
 
