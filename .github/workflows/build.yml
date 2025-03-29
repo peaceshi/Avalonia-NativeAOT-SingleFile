@@ -30,7 +30,9 @@ jobs:
         working-directory: ${{github.workspace}}
         shell: pwsh
         run: |
-            dotnet restore
+            dotnet restore MessengerGenerator\MessengerGenerator.csproj
+            dotnet restore ViewLocatorGenerator\ViewLocatorGenerator.csproj
+            dotnet restore Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile.csproj
             # dotnet publish -r win-x64 -c Release
             # mv Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile\bin\Release\net8.0-windows\win-x64\native\ .
 
