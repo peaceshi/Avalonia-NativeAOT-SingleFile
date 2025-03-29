@@ -9,39 +9,39 @@ jobs:
       - uses: TheMrMilchmann/setup-msvc-dev@v3
         with:
           arch: x64
-          
+
       - name: Prepare
         working-directory: ${{github.workspace}}
         shell: bash
         run: |
-            curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
-            7z e ./*.zip -y -o"."
-            mkdir libs && cd libs
-            curl -OL https://github.com/2ndlab/ANGLE.Static/releases/download/v1.2.0/av_libglesv2-10.0.26100.0.7z
-            curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libHarfBuzzSharp-10.0.26100.0.7z
-            curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libSkiaSharp-2.88.9-10.0.26100.0.7z
-            7z e av_libglesv2-10.0.26100.0.7z -y
-            7z e libHarfBuzzSharp-10.0.26100.0.7z -y
-            7z e libSkiaSharp-2.88.9-10.0.26100.0.7z -y
-            ls -al
-            mv *.lib *.pdb ../Avalonia-NativeAOT-SingleFile/native/
+          curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
+          7z e ./*.zip -y -o"."
+          mkdir libs && cd libs
+          curl -OL https://github.com/2ndlab/ANGLE.Static/releases/download/v1.2.0/av_libglesv2-10.0.26100.0.7z
+          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libHarfBuzzSharp-10.0.26100.0.7z
+          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libSkiaSharp-2.88.9-10.0.26100.0.7z
+          7z e av_libglesv2-10.0.26100.0.7z -y
+          7z e libHarfBuzzSharp-10.0.26100.0.7z -y
+          7z e libSkiaSharp-2.88.9-10.0.26100.0.7z -y
+          ls -al
+          mv *.lib *.pdb ../Avalonia-NativeAOT-SingleFile/native/
 
       - name: Build
         working-directory: ${{github.workspace}}
         shell: pwsh
         run: |
-            dotnet restore MessengerGenerator\MessengerGenerator.csproj
-            dotnet restore ViewLocatorGenerator\ViewLocatorGenerator.csproj
-            dotnet restore Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile.csproj
-            # dotnet publish -r win-x64 -c Release
-            # mv Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile\bin\Release\net8.0-windows\win-x64\native\ .
+          dotnet restore MessengerGenerator\MessengerGenerator.csproj
+          dotnet restore ViewLocatorGenerator\ViewLocatorGenerator.csproj
+          dotnet restore Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile.csproj
+          dotnet publish -r win-x64 -c Release
+          mv Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile\bin\Release\net8.0-windows\win-x64\native\* .
 
       - name: Package ANGLE
         working-directory: ${{github.workspace}}
         shell: pwsh
         run: |
-            # ./upx.exe --ultra-brute --overlay=strip .\Avalonia-NativeAOT-SingleFile.exe -o Avalonia-NativeAOT-SingleFile.UPX.exe
-            7z a -y -mx9 Avalonia-NativeAOT-SingleFile.7z ./Avalonia-NativeAOT-SingleFile.*
+          # ./upx.exe --ultra-brute --overlay=strip .\Avalonia-NativeAOT-SingleFile.exe -o Avalonia-NativeAOT-SingleFile.UPX.exe
+          7z a -y -mx9 Avalonia-NativeAOT-SingleFile.7z ./Avalonia-NativeAOT-SingleFile.exe ./Avalonia-NativeAOT-SingleFile.UPX.exe ./Avalonia-NativeAOT-SingleFile.pdb
 
       - name: Create MD5
         working-directory: ${{github.workspace}}
