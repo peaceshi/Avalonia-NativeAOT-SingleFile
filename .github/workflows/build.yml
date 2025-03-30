@@ -6,6 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
       - uses: TheMrMilchmann/setup-msvc-dev@v3
         with:
           arch: x64
@@ -32,9 +39,9 @@ jobs:
         run: |
           msbuild /m /t:restore Avalonia-NativeAOT-SingleFile.sln /p:Configuration=Release /p:Platform="Any CPU"
           dotnet publish Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile.csproj -r win-x64 -c Release
-          mv Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile\bin\Release\net8.0-windows\win-x64\native\* .
+          mv Avalonia-NativeAOT-SingleFile\bin\Release\net8.0-windows\win-x64\native\* .
 
-      - name: Package ANGLE
+      - name: Package
         working-directory: ${{github.workspace}}
         shell: pwsh
         run: |
