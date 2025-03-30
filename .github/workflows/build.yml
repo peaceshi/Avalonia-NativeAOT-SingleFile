@@ -45,7 +45,7 @@ jobs:
         working-directory: ${{github.workspace}}
         shell: pwsh
         run: |
-          # ./upx.exe --ultra-brute --overlay=strip .\Avalonia-NativeAOT-SingleFile.exe -o Avalonia-NativeAOT-SingleFile.UPX.exe
+          ./upx.exe --ultra-brute --overlay=strip .\Avalonia-NativeAOT-SingleFile.exe -o Avalonia-NativeAOT-SingleFile.UPX.exe
           7z a -y -mx9 Avalonia-NativeAOT-SingleFile.7z ./Avalonia-NativeAOT-SingleFile.exe ./Avalonia-NativeAOT-SingleFile.UPX.exe ./Avalonia-NativeAOT-SingleFile.pdb
 
       - name: Create MD5
