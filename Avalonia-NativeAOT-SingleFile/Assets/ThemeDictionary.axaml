@@ -10,4 +10,7 @@
             <SolidColorBrush x:Key='WindowContainerTitleBarBackgroundBrush'>#44000000</SolidColorBrush>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary.MergedDictionaries>
+        <MergeResourceInclude Source="/Assets/FontIconButton.axaml" />
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

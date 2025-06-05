@@ -40,6 +40,7 @@
         <Setter Property="WindowStartupLocation" Value="CenterScreen" />
     </Style>
     <Style Selector="Button.IconButton">
+        <Setter Property="Theme" Value="{DynamicResource FontIconButtonTheme}" />
         <Setter Property="FontFamily" Value="Segoe Fluent Icons" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Margin" Value="8" />
