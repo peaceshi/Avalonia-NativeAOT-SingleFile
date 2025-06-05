@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Types\**"/>
+        <Compile Include="Constants.fs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="MainWindow.fs"/>
+        <Compile Include="Settings.fs"/>
+    </ItemGroup>
+
+</Project>
