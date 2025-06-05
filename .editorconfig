@@ -1,0 +1,25 @@
+﻿# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[{*.fs,*.cs}]
+# Tab indentation
+indent_style = space
+indent_size = 4
+# Set to `lf`, `cr`, or `crlf` to control how line breaks are represented
+end_of_line = crlf
+insert_final_newline = true
+# Remove any whitespace characters preceding newline characters
+trim_trailing_whitespace =true
+# Set default charset `latin1`, `utf-8`, `utf-8-bom`, `utf-16be` or `utf-16le`
+charset = utf-8
+# Supported By A Limited Number of Editors
+max_line_length = 120
+
+# The indent size used in the `package.json` file cannot be changed
+# https://github.com/npm/npm/pull/3180#issuecomment-16336516
+[{*.yml,*.yaml,package.json}]
+indent_style = space
+indent_size = 2
