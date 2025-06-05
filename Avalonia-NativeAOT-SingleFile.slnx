@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+  <Project Path="MessengerGenerator/MessengerGenerator.csproj" />
+  <Project Path="Models/Models.fsproj" />
+  <Project Path="ViewLocatorGenerator/ViewLocatorGenerator.csproj" />
+</Solution>
