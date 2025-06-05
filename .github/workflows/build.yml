@@ -1,5 +1,8 @@
 name: build
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - "*.md"
 jobs:
   build:
     runs-on: windows-latest
@@ -22,14 +25,14 @@ jobs:
         shell: bash
         run: |
           curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
-          7z e ./*.zip -y -o"."
+          7z e -y ./*.zip -o"."
           mkdir libs && cd libs
-          curl -OL https://github.com/2ndlab/ANGLE.Static/releases/download/v1.2.0/av_libglesv2-10.0.26100.0.7z
-          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libHarfBuzzSharp-10.0.26100.0.7z
-          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v1.1.0/libSkiaSharp-2.88.9-10.0.26100.0.7z
-          7z e av_libglesv2-10.0.26100.0.7z -y
-          7z e libHarfBuzzSharp-10.0.26100.0.7z -y
-          7z e libSkiaSharp-2.88.9-10.0.26100.0.7z -y
+          curl -OL https://github.com/2ndlab/ANGLE.Static/releases/download/v2.0.0-pre/angle-x64-windows-static-chromium-7151-10.0.26100.0.7z
+          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v2.0.0-pre/libHarfBuzzSharp-10.0.26100.0.7z
+          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v2.0.0-pre/libSkiaSharp-2.88.9-10.0.26100.0.7z
+          7z e -y angle-x64-windows-static-chromium-7151-10.0.26100.0.7z 
+          7z e -y libHarfBuzzSharp-10.0.26100.0.7z
+          7z e -y libSkiaSharp-2.88.9-10.0.26100.0.7z
           ls -al
           mv *.lib *.pdb ../Avalonia-NativeAOT-SingleFile/native/
 
@@ -49,37 +52,32 @@ jobs:
           7z a -y -mx9 Avalonia-NativeAOT-SingleFile.7z ./Avalonia-NativeAOT-SingleFile.exe ./Avalonia-NativeAOT-SingleFile.pdb
           7z a -y -mx9 Avalonia-NativeAOT-SingleFile.UPX.7z ./Avalonia-NativeAOT-SingleFile.UPX.exe
 
-      - name: Create MD5
-        working-directory: ${{github.workspace}}
-        shell: bash
-        run: |
-          md5sum Avalonia-NativeAOT-SingleFile.7z > Avalonia-NativeAOT-SingleFile.7z.md5
-          md5sum Avalonia-NativeAOT-SingleFile.UPX.7z > Avalonia-NativeAOT-SingleFile.UPX.7z.md5
-
       - name: List dir
         working-directory: ${{github.workspace}}
         shell: bash
         run: ls -al .
 
       - uses: actions/upload-artifact@v4
+        id: upload-artifact-1
         with:
           name: Avalonia-NativeAOT-SingleFile.7z
           path: Avalonia-NativeAOT-SingleFile.7z
 
       - uses: actions/upload-artifact@v4
-        with:
-          name: Avalonia-NativeAOT-SingleFile.7z.md5
-          path: Avalonia-NativeAOT-SingleFile.7z.md5
-
-      - uses: actions/upload-artifact@v4
+        id: upload-artifact-2
         with:
           name: Avalonia-NativeAOT-SingleFile.UPX.7z
           path: Avalonia-NativeAOT-SingleFile.UPX.7z
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/attest-build-provenance@v2
         with:
-          name: Avalonia-NativeAOT-SingleFile.UPX.7z.md5
-          path: Avalonia-NativeAOT-SingleFile.UPX.7z.md5
+          subject-name: Avalonia-NativeAOT-SingleFile.7z
+          subject-digest: sha256:${{ steps.upload-artifact-1.outputs.artifact-digest }}
+
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: Avalonia-NativeAOT-SingleFile.UPX.7z
+          subject-digest: sha256:${{ steps.upload-artifact-2.outputs.artifact-digest }}
 
       - name: Release artifacts
         uses: softprops/action-gh-release@v2
@@ -87,6 +85,4 @@ jobs:
         with:
           files: |
             Avalonia-NativeAOT-SingleFile.7z
-            Avalonia-NativeAOT-SingleFile.7z.md5
             Avalonia-NativeAOT-SingleFile.UPX.7z
-            Avalonia-NativeAOT-SingleFile.UPX.7z.md5
