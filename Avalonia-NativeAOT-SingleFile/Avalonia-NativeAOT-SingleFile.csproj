@@ -32,46 +32,44 @@
         <DirectPInvoke Include="libHarfBuzzSharp"/>
         <NativeLibrary Include="native\libHarfBuzzSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
         <DirectPInvoke Include="libSkiaSharp"/>
-        <NativeLibrary Include="native\libSkiaSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <NativeLibrary Include="native\skia.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <NativeLibrary Include="native\SkiaSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
         <DirectPInvoke Include="av_libglesv2"/>
-        <NativeLibrary Include="native\av_libglesv2.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <NativeLibrary Include="native\libANGLE_static.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <NativeLibrary Include="native\libGLESv2_static.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <NativeLibrary Include="d3d9.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
+        <NativeLibrary Include="dxguid.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Models\"/>
         <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
     <ItemGroup Label="PackageReferences">
-        <PackageReference Include="Avalonia" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <PackageReference Include="Avalonia" Version="11.3.0" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.3.0" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.0" />
+<!--        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.0-beta2" />-->
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
-            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
-            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.3.0">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">none</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
-        <!--        <PackageReference Include="HotAvalonia" Version="3.0.0">-->
-        <!--            <PrivateAssets>all</PrivateAssets>-->
-        <!--            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
-        <!--        </PackageReference>-->
-        <!--        <PackageReference Include="HotAvalonia.Extensions" Version="3.0.0">-->
-        <!--            <PrivateAssets>all</PrivateAssets>-->
-        <!--            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
-        <!--        </PackageReference>-->
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+<!--        <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="9.0.4" />-->
+<!--        <PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="9.0.4" />-->
         <PackageReference Include="PolySharp" Version="1.15.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="VC-LTL" Version="5.2.1"/>
-        <PackageReference Include="Xaml.Behaviors" Version="11.2.0.14"/>
+        <PackageReference Include="VC-LTL" Version="5.2.2-Beta1" />
+<!--        <PackageReference Include="Xaml.Behaviors" Version="11.2.7" />-->
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\MessengerGenerator\MessengerGenerator.csproj" OutputItemType="Analyzer"
         />
+        <ProjectReference Include="..\Models\Models.fsproj"/>
         <ProjectReference Include="..\ViewLocatorGenerator\ViewLocatorGenerator.csproj" OutputItemType="Analyzer"
                           ReferenceOutputAssembly="false"/>
     </ItemGroup>
