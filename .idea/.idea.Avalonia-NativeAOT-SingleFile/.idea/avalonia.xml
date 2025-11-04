@@ -5,6 +5,7 @@
       <map>
         <entry key="Avalonia-NativeAOT-SingleFile/App.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/FontIconButton.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Assets/FontIcons.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/IconFonts.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/ThemeDictionary.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/ThemeStyles.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
@@ -14,6 +15,7 @@
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainer/SplitViewPane.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainer/TitleBar.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainerPanel.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Styles/ThemeStyles.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/ThemeDictionary.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Views/AboutWindow.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Views/FirstPage.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />

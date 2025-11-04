@@ -4,7 +4,7 @@
 root = true
 
 # Unix-style newlines with a newline ending every file
-[{*.fs,*.cs}]
+[{*.fs,*.cs,*.props,*.targets,*.csproj,*.fsproj,*.axaml}]
 # Tab indentation
 indent_style = space
 indent_size = 4
@@ -12,7 +12,7 @@ indent_size = 4
 end_of_line = crlf
 insert_final_newline = true
 # Remove any whitespace characters preceding newline characters
-trim_trailing_whitespace =true
+trim_trailing_whitespace = true
 # Set default charset `latin1`, `utf-8`, `utf-8-bom`, `utf-16be` or `utf-16le`
 charset = utf-8
 # Supported By A Limited Number of Editors

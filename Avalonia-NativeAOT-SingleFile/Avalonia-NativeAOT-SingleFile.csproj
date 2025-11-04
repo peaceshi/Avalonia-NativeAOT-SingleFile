@@ -16,59 +16,33 @@
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     </PropertyGroup>
 
-    <PropertyGroup Label="PublishConfiguration" Condition="'$(Configuration)'=='Release'">
-        <TrimMode>full</TrimMode>
-        <PublishAot>true</PublishAot>
-        <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
-        <StaticExecutable>true</StaticExecutable>
-    </PropertyGroup>
-
     <ItemGroup Label="TrimmerRootConfiguration" Condition="'$(Configuration)'=='Release'">
         <TrimmerRootAssembly Include="Avalonia.Themes.Fluent"/>
-        <!--        <TrimmerRootAssembly Include="Xaml.Behaviors"/>-->
-        <!--        <TrimmerRootDescriptor Include="TrimmerRoots.xml"/>-->
     </ItemGroup>
 
-    <ItemGroup Label="ImportLib">
-        <DirectPInvoke Include="libHarfBuzzSharp"/>
-        <NativeLibrary Include="native\libHarfBuzzSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
-        <DirectPInvoke Include="libSkiaSharp"/>
-        <NativeLibrary Include="native\skia.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
-        <NativeLibrary Include="native\SkiaSharp.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
-        <DirectPInvoke Include="av_libglesv2"/>
-        <NativeLibrary Include="native\libANGLE_static.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
-        <NativeLibrary Include="native\libGLESv2_static.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
-        <LinkerArg Include="d3d9.lib;dxguid.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))"/>
-        <!--        <LinkerArg Include="dxgi.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))" />-->
-        <!--        <LinkerArg Include="Gdi32.lib;User32.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))" />-->
-        <!--        <LinkerArg Include="synchronization.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))" />-->
-        <!--        <LinkerArg Include="fontsub.lib;Ole32.lib;USP10.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))" />-->
-        <!--        <LinkerArg Include="d3d12.lib;d3dcompiler.lib" Condition="$(RuntimeIdentifier.StartsWith('win'))" />-->
-    </ItemGroup>
+    <Import Project="Build\NativeAOT.props"/>
 
     <ItemGroup>
         <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
     <ItemGroup Label="PackageReferences">
-        <PackageReference Include="Avalonia" Version="12.0.999-cibuild0058459-alpha"/>
-        <PackageReference Include="Avalonia.Desktop" Version="12.0.999-cibuild0058459-alpha"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.999-cibuild0058459-alpha"/>
-        <!--        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.0-beta2" />-->
+        <PackageReference Include="2ndLAB.ANGLE.Static" Version="7151.0.0-10.0.26100.0-1.79e529b"/>
+        <PackageReference Include="2ndLAB.SkiaSharp.Static" Version="3.119.0-10.0.26100.0-1.1c7d845"/>
+        <PackageReference Include="Avalonia" Version="12.0.999-cibuild0059760-alpha"/>
+        <PackageReference Include="Avalonia.Desktop" Version="12.0.999-cibuild0059760-alpha"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.999-cibuild0059760-alpha"/>
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Include="Avalonia.Diagnostics" Version="12.0.999-cibuild0058459-alpha">
+        <PackageReference Include="Avalonia.Diagnostics" Version="12.0.999-cibuild0059760-alpha">
             <IncludeAssets Condition="'$(Configuration)' != 'Debug'">none</IncludeAssets>
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">all</PrivateAssets>
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0"/>
-        <!--        <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="9.0.4" />-->
-        <!--        <PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="9.0.4" />-->
         <PackageReference Include="PolySharp" Version="1.15.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="VC-LTL" Version="5.2.2"/>
-        <!--        <PackageReference Include="Xaml.Behaviors" Version="11.2.7" />-->
     </ItemGroup>
 
     <ItemGroup>
@@ -79,10 +53,4 @@
                           ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <Compile Update="Views\WelcomePage.axaml.cs">
-            <DependentUpon>WelcomePage.axaml</DependentUpon>
-            <SubType>Code</SubType>
-        </Compile>
-    </ItemGroup>
 </Project>

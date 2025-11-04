@@ -12,5 +12,8 @@
         <Compile Include="MainWindow.fs"/>
         <Compile Include="Settings.fs"/>
     </ItemGroup>
+    <ItemGroup>
+        <PackageReference Update="FSharp.Core" Version="9.0.303"/>
+    </ItemGroup>
 
 </Project>

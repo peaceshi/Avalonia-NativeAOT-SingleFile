@@ -3,8 +3,13 @@
     <Design.PreviewWith>
         <Border Padding="20">
             <StackPanel Spacing="20">
-                <Button Content="Click Me!" />
-                <Button Classes="accent" Content="Click Me!" />
+                <Button Classes="IconButton" Content="{StaticResource Back}" />
+                <Button Classes="IconButton">
+                    <Grid>
+                        <TextBlock Text="&#xEB52;" FontSize="16" Foreground="#C72335" />
+                        <TextBlock Text="&#xEB51;" FontSize="16" />
+                    </Grid>
+                </Button>
             </StackPanel>
         </Border>
     </Design.PreviewWith>

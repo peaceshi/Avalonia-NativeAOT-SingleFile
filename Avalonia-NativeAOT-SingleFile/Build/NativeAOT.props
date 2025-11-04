@@ -1,0 +1,25 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup Label="PublishConfiguration" Condition="'$(Configuration)'=='Release'">
+        <PublishAot>true</PublishAot>
+    </PropertyGroup>
+
+    <PropertyGroup Label="PublishAotConfiguration" Condition="'$(PublishAot)' == 'true'">
+        <TrimMode>full</TrimMode>
+        <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+        <StaticExecutable>true</StaticExecutable>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+        <DirectPInvoke Include="libHarfBuzzSharp"/>
+        <DirectPInvoke Include="libSkiaSharp"/>
+        <DirectPInvoke Include="av_libglesv2"/>
+        <LinkerArg Include="d3d9.lib;dxguid.lib"/>
+        <LinkerArg Include="dxgi.lib"/>
+        <LinkerArg Include="Gdi32.lib;User32.lib"/>
+        <LinkerArg Include="synchronization.lib"/>
+        <LinkerArg Include="fontsub.lib;Ole32.lib;USP10.lib"/>
+        <LinkerArg Include="d3d12.lib;d3dcompiler.lib"/>
+    </ItemGroup>
+
+</Project>

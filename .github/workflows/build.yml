@@ -30,15 +30,6 @@ jobs:
         run: |
           curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
           7z e -y ./*.zip -o"."
-          mkdir libs && cd libs
-          curl -OL https://github.com/2ndlab/ANGLE.Static/releases/download/v2.0.0-pre/angle-x64-windows-static-chromium-7151-10.0.26100.0.7z
-          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v2.0.0-pre/libHarfBuzzSharp-10.0.26100.0.7z
-          curl -OL https://github.com/2ndlab/SkiaSharp.Static/releases/download/v2.0.0-pre/libSkiaSharp-2.88.9-10.0.26100.0.7z
-          7z e -y angle-x64-windows-static-chromium-7151-10.0.26100.0.7z 
-          7z e -y libHarfBuzzSharp-10.0.26100.0.7z
-          7z e -y libSkiaSharp-2.88.9-10.0.26100.0.7z
-          ls -al
-          mv *.lib *.pdb ../Avalonia-NativeAOT-SingleFile/native/
 
       - name: Build
         working-directory: ${{github.workspace}}
