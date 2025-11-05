@@ -31,10 +31,11 @@ jobs:
           curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
           7z e -y ./*.zip -o"."
           mkdir msix && cd msix
-          curl -OL https://github.com/user-attachments/files/23360746/appxmanifest.xml
-          curl -L https://github.com/user-attachments/assets/b6cd2a6b-cbf2-445f-922d-21298bb4c161 -o AvaloniaNativeAOTSingleFile.exeBadgeLogo.scale-150.png
-          curl -L https://github.com/user-attachments/assets/f2d4b2ae-d8f3-4ac1-903f-b42f8dd713e9 -o AvaloniaNativeAOTSingleFile.exeSquare44x44Logo.scale-100.png
-          curl -L https://github.com/user-attachments/assets/dab9ad2e-2304-4a9c-ad6e-62c86ff6395a -o AvaloniaNativeAOTSingleFile.exeSquare310x310Logo.scale-500.png
+          curl -OL https://github.com/user-attachments/files/23363995/appxmanifest.xml
+          curl -L https://github.com/user-attachments/assets/a0c87824-a4fa-44ee-b69a-164a82152e27 -o AvaloniaNativeAOTSingleFile.exeLogo.png
+          curl -L https://github.com/user-attachments/assets/00b3cb0e-cb7d-42b8-a232-eba28f3b2b8e -o AvaloniaNativeAOTSingleFile.exeSquare150x150Logo.png
+          curl -L https://github.com/user-attachments/assets/ee48dc21-930d-4a9b-bc0b-8f47e28c0508 -o AvaloniaNativeAOTSingleFile.exeSquare44x44Logo.png
+
       - name: Build
         working-directory: ${{github.workspace}}
         shell: pwsh
