@@ -30,7 +30,11 @@ jobs:
         run: |
           curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
           7z e -y ./*.zip -o"."
-
+          mkdir msix && cd msix
+          curl -OL https://github.com/user-attachments/files/23360746/appxmanifest.xml
+          curl -L https://github.com/user-attachments/assets/b6cd2a6b-cbf2-445f-922d-21298bb4c161 -o AvaloniaNativeAOTSingleFile.exeBadgeLogo.scale-150.png
+          curl -L https://github.com/user-attachments/assets/f2d4b2ae-d8f3-4ac1-903f-b42f8dd713e9 -o AvaloniaNativeAOTSingleFile.exeSquare44x44Logo.scale-100.png
+          curl -L https://github.com/user-attachments/assets/dab9ad2e-2304-4a9c-ad6e-62c86ff6395a -o AvaloniaNativeAOTSingleFile.exeSquare310x310Logo.scale-500.png
       - name: Build
         working-directory: ${{github.workspace}}
         shell: pwsh
@@ -46,6 +50,14 @@ jobs:
           ./upx.exe --ultra-brute --overlay=strip .\Avalonia-NativeAOT-SingleFile.exe -o Avalonia-NativeAOT-SingleFile.UPX.exe
           7z a -y -mx9 Avalonia-NativeAOT-SingleFile.7z ./Avalonia-NativeAOT-SingleFile.exe ./Avalonia-NativeAOT-SingleFile.pdb
           7z a -y -mx9 Avalonia-NativeAOT-SingleFile.UPX.7z ./Avalonia-NativeAOT-SingleFile.UPX.exe
+
+      - name: Package msix
+        working-directory: ${{github.workspace}}
+        shell: pwsh
+        run: |
+          mv Avalonia-NativeAOT-SingleFile.exe msix
+          cd msix
+          makeappx.exe pack /d ./ /p ../App.msix
 
       - name: List dir
         working-directory: ${{github.workspace}}
@@ -64,6 +76,12 @@ jobs:
           name: Avalonia-NativeAOT-SingleFile.UPX.7z
           path: Avalonia-NativeAOT-SingleFile.UPX.7z
 
+      - uses: actions/upload-artifact@v4
+        id: upload-artifact-3
+        with:
+          name: App.msix
+          path: App.msix
+
       - uses: actions/attest-build-provenance@v2
         with:
           subject-name: Avalonia-NativeAOT-SingleFile.7z
@@ -74,6 +92,11 @@ jobs:
           subject-name: Avalonia-NativeAOT-SingleFile.UPX.7z
           subject-digest: sha256:${{ steps.upload-artifact-2.outputs.artifact-digest }}
 
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: App.msix
+          subject-digest: sha256:${{ steps.upload-artifact-3.outputs.artifact-digest }}
+
       - name: Release artifacts
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
@@ -81,3 +104,4 @@ jobs:
           files: |
             Avalonia-NativeAOT-SingleFile.7z
             Avalonia-NativeAOT-SingleFile.UPX.7z
+            App.msix
