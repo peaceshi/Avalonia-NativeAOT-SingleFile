@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Avalonia;
 
 namespace Avalonia_NativeAOT_SingleFile;
@@ -23,17 +23,13 @@ public static class Program
     [STAThread]
     public static void Main(string[] args) =>
         BuildAvaloniaApp()
-            .With(new Win32PlatformOptions
-            {
-                RenderingMode = [Win32RenderingMode.AngleEgl],
-                DpiAwareness = Win32DpiAwareness.PerMonitorDpiAware
-            })
             .StartWithClassicDesktopLifetime(args);
 
     // Avalonia configuration, don't remove; also used by visual designer.
     private static AppBuilder BuildAvaloniaApp() =>
         AppBuilder.Configure<App>()
             .UsePlatformDetect()
+            .WithDeveloperTools()
             // .WithInterFont() // We use Windows 11 Segoe Fluent Icons.
             .LogToTrace();
 }

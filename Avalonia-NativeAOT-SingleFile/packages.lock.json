@@ -1,7 +1,7 @@
 {
   "version": 1,
   "dependencies": {
-    "net8.0-windows7.0": {
+    "net10.0-windows7.0": {
       "2ndLAB.ANGLE.Static": {
         "type": "Direct",
         "requested": "[7151.0.0-10.0.26100.0-1.79e529b, )",
@@ -16,65 +16,53 @@
       },
       "Avalonia": {
         "type": "Direct",
-        "requested": "[12.0.999-cibuild0059760-alpha, )",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "VdiN6j2cnhEVWt1T3xzaeoajNRTUYmb5P1MZXBqzs+f5MdlTk3CB9RtUqONnMFdN83jkhTck4z4GuCoybLAvCQ==",
+        "requested": "[12.1.999-cibuild0064826-alpha, )",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "z9FJtQTBb1bQKTvfMfpd5r2HqyPiUTLLKbsmej60SXxqu+BFld4gz3modum6FGlzb4sDE7E6G15sYVW/dBSl8A==",
         "dependencies": {
-          "Avalonia.BuildServices": "11.3.1",
-          "Avalonia.Remote.Protocol": "12.0.999-cibuild0059760-alpha",
-          "MicroCom.Runtime": "0.11.0"
+          "Avalonia.BuildServices": "11.3.2",
+          "Avalonia.Remote.Protocol": "12.1.999-cibuild0064826-alpha",
+          "MicroCom.Runtime": "0.11.4"
         }
       },
       "Avalonia.Desktop": {
         "type": "Direct",
-        "requested": "[12.0.999-cibuild0059760-alpha, )",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "ebUOUg2GVyI7rLOwd7dhXmFNyJ+kFsBmDwhUqefAOHVmnSdM2c42Hzv0qh27f6fZ5c3jOVc5XWOuLgoKc6qcpg==",
+        "requested": "[12.1.999-cibuild0064826-alpha, )",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "svYKHstg30wIsNHtM8yEN4HbaVc5kbnKVUKKiEqrg1XvkxYodc7Ed+xc26dFGqNOA+EJK+i95UYZtgYQJG+P2Q==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Native": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Skia": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Win32": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.X11": "12.0.999-cibuild0059760-alpha"
-        }
-      },
-      "Avalonia.Diagnostics": {
-        "type": "Direct",
-        "requested": "[12.0.999-cibuild0059760-alpha, )",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "cU4s854zLRw7y52zvGiCSUG0pf970KPglinZKGKQnGNK85QxTWyjq6FDfkgZlABeYEBFKPPHNYaX9jCOFKDpaQ==",
-        "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Controls.ColorPicker": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Themes.Simple": "12.0.999-cibuild0059760-alpha"
+          "Avalonia": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.HarfBuzz": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.Native": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.Skia": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.Win32": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.X11": "12.1.999-cibuild0064826-alpha"
         }
       },
       "Avalonia.Themes.Fluent": {
         "type": "Direct",
-        "requested": "[12.0.999-cibuild0059760-alpha, )",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "0RSf9tHufC98451xFx32We4LzjV+ZM3JywnVG/ZyqZ2Z2ScuPjT7+4yzkMb8okG9Qvu71BeJZzrZQYUfaXnv6A==",
+        "requested": "[12.1.999-cibuild0064826-alpha, )",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "RP+sFsyvtTVP4IjKHyZAebjsNIEO1/eMLpjzscWmdRxyYPb4OtpaFNvVE+6Pc81wyhfd2BCryI55qarcPmwXoA==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha"
+          "Avalonia": "12.1.999-cibuild0064826-alpha"
+        }
+      },
+      "AvaloniaUI.DiagnosticsSupport": {
+        "type": "Direct",
+        "requested": "[2.2.1, )",
+        "resolved": "2.2.1",
+        "contentHash": "PXviRj+8t6IT7JdnVhs1EET+VgGB/K1Ju3yL/Q9sXR2YD9NzkIYybyfJG3DPXcTYXpEJZJvxGiCTjH1N8AkLhQ==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
         }
       },
       "CommunityToolkit.Mvvm": {
         "type": "Direct",
-        "requested": "[8.4.0, )",
-        "resolved": "8.4.0",
-        "contentHash": "tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw=="
-      },
-      "Microsoft.DotNet.ILCompiler": {
-        "type": "Direct",
-        "requested": "[8.0.20, )",
-        "resolved": "8.0.20",
-        "contentHash": "BnTvC6mpQ4rKzKzRpHb1M2SxsNGn6FiSa7xaJenuwXjmDqCAZWZg5noPnBtCqPTXYu8ng3FSIeVq9OY87bgLzw=="
-      },
-      "Microsoft.NET.ILLink.Tasks": {
-        "type": "Direct",
-        "requested": "[8.0.20, )",
-        "resolved": "8.0.20",
-        "contentHash": "Rhcto2AjGvTO62+/VTmBpumBOmqIGp7nYEbTbmEXkCq4yPGxV8whju3/HsIA/bKyo2+DggaYk5+/8sxb1AbPTw=="
+        "requested": "[8.4.2, )",
+        "resolved": "8.4.2",
+        "contentHash": "WadCzGEc2U+3e20avRLng4qNtt4zoOGWrdUISqJWrHe3/FSnrYjuM5Sb4yQb09LhkBXrrI4Zt3dLKgRMbItsrg=="
       },
       "PolySharp": {
         "type": "Direct",
@@ -84,12 +72,9 @@
       },
       "VC-LTL": {
         "type": "Direct",
-        "requested": "[5.2.2, )",
-        "resolved": "5.2.2",
-        "contentHash": "cG9zbKir5zYsO+1Yyn65MAD5vDNXYuaUl9zPCL4uA2Bdrm7A0S4K00GKr5mibaYbRwxJ8mKP7H2V/0URP6ymnw==",
-        "dependencies": {
-          "YY-Thunks": "1.1.7"
-        }
+        "requested": "[5.3.1, )",
+        "resolved": "5.3.1",
+        "contentHash": "kFNVuuOmDto7R1aPvWTboEhyWBeIzA8CJAgpGRb/msDl8CIb7vjUxmff3PQrzOk5wpuftNZz0PwrX7dWK2jIrQ=="
       },
       "Avalonia.Angle.Windows.Natives": {
         "type": "Transitive",
@@ -98,288 +83,208 @@
       },
       "Avalonia.BuildServices": {
         "type": "Transitive",
-        "resolved": "11.3.1",
-        "contentHash": "k/WwXbqwaCtmE0a90YXB9plT50ok6OgLBIr+DUYK16akJN82iK69kgkL1vGDd8XBvf77JM3O27znBuy7AEoFgg=="
-      },
-      "Avalonia.Controls.ColorPicker": {
-        "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "EwnzvcJMdlHdgM0HqlylvgVijptv1vhzPyA1692WLcCp4xlsNPuCwzKiPfEF6nJVsKVRIpgi7xlu/ngV00g43g==",
-        "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Remote.Protocol": "12.0.999-cibuild0059760-alpha"
-        }
+        "resolved": "11.3.2",
+        "contentHash": "qHDToxto1e3hci5YqbG9n0Ty8mlp3zBUN5wT66wKqaDVzXyQ0do3EnRILd4Ke9jpvsktaPpgE0YjEk7hornryQ=="
       },
       "Avalonia.FreeDesktop": {
         "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "I2WlOOo9vQ1FsryHmmqCVebbOS44W+V0Zg1Zj+XA/zwS4evcbS5gavimyiCuYNjVlZqwres34wzQbK7P6ipyEg==",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "V9yQ/BDr/Z82spPLDxaUqsfX75K6uttxc6uCWt85yQlUdIi2l8sCk02X8Na/NC5+e9yF4/ZZ5QkZRvBSTZVyig==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
-          "Tmds.DBus.Protocol": "0.21.2"
+          "Avalonia": "12.1.999-cibuild0064826-alpha",
+          "Tmds.DBus.Protocol": "0.92.0"
+        }
+      },
+      "Avalonia.FreeDesktop.AtSpi": {
+        "type": "Transitive",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "OsndPz5EYWhAttIzMyI3Ba881CUHPR27SPOrrFkavuG897BPrpJO6gSUQKBCDINHsvSl0tOTr8LDbhtKFc9Hjw==",
+        "dependencies": {
+          "Avalonia": "12.1.999-cibuild0064826-alpha"
+        }
+      },
+      "Avalonia.HarfBuzz": {
+        "type": "Transitive",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "2dnhcqSeOOxvekAimHLPD6k4VtHNpeDBkZINmKXyYz6xywkiIlKobjQu+6AtyCwxJYErvipHnxhhwXA5WQOuqQ==",
+        "dependencies": {
+          "Avalonia": "12.1.999-cibuild0064826-alpha",
+          "HarfBuzzSharp": "8.3.1.3",
+          "HarfBuzzSharp.NativeAssets.Linux": "8.3.1.3",
+          "HarfBuzzSharp.NativeAssets.WebAssembly": "8.3.1.3"
         }
       },
       "Avalonia.Native": {
         "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "p9neoXKP1Rp/MnACb5S3yY7EYlC0rgQ34/65cKG/vEWQtuvc6Hsz0es1ZUA9lO01K/TGTAB7S5/FUIpo7oGhgA==",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "dNbC5r/Df5q/vKiGWVa/yzHiPqedDK8DYOI9wU0S4rblYBSNwI8rzvTZgup1mvt8tr+/uq7v/DPEGOIAXhD9nQ==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha"
+          "Avalonia": "12.1.999-cibuild0064826-alpha"
         }
       },
       "Avalonia.Remote.Protocol": {
         "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "dYBp0kTf444z8y2PZeeT9kDsEevZnkuERhBaF8vgUIerzTInZJMFbBkdNxGoXkdEnQZaPYoksMksQqmYELnitg=="
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "MZFheDARuMG/EnzMIUwk46CHmK23dD2ko/vpesdynDeO0p32vI9wB6PmRub0PDxEtGt+DXExhV9BX1Ggw7f4Hg=="
       },
       "Avalonia.Skia": {
         "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "Zjqkq5R6dV5Vpetu4OETF6yMh1NsgPdpsnn2iTnkHfkaJle+AYoXMcqd5LRbjekftRXQ0Uf3v+TNcYbAceROGg==",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "TQlbqRlpr5YwdjkIQcjAsldLqe86Wpd+YKfNqeGBAlQLdlxVHT1rt8v0vUYL0RENCkhII6vuqZqTr0XbhfkzKw==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
-          "HarfBuzzSharp": "8.3.1.1",
-          "HarfBuzzSharp.NativeAssets.Linux": "8.3.1.1",
-          "HarfBuzzSharp.NativeAssets.WebAssembly": "8.3.1.1",
-          "SkiaSharp": "3.119.0",
-          "SkiaSharp.NativeAssets.Linux": "3.119.0",
-          "SkiaSharp.NativeAssets.WebAssembly": "3.119.0"
-        }
-      },
-      "Avalonia.Themes.Simple": {
-        "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "bF9M0KkgTtC2VumOdO4ZR7/WQg2fl4dyD2ne/qaY71u2ORi45xOaBzQbclSRUA4fZ81votGK5KiFyf9m8VvDig==",
-        "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha"
+          "Avalonia": "12.1.999-cibuild0064826-alpha",
+          "HarfBuzzSharp": "8.3.1.3",
+          "HarfBuzzSharp.NativeAssets.Linux": "8.3.1.3",
+          "HarfBuzzSharp.NativeAssets.WebAssembly": "8.3.1.3",
+          "SkiaSharp": "3.119.3-preview.1.1",
+          "SkiaSharp.NativeAssets.Linux": "3.119.3-preview.1.1",
+          "SkiaSharp.NativeAssets.WebAssembly": "3.119.3-preview.1.1"
         }
       },
       "Avalonia.Win32": {
         "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "3Tc9lsLXAsDSS68AM1aFnc0rLMSDujw7Zt9HFXGMacXh96yK9eMTMIAN65TGPcHshFBdIxAmf0xwoVBKm5jeww==",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "WAcFj9RnGp/IOnhopiNYJIjFf1ILSm3nk6NZyNXtxfp9+6TysrUKyWQpMW/2AruoyjpPPbK5VzErCgxIgsofDg==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
+          "Avalonia": "12.1.999-cibuild0064826-alpha",
           "Avalonia.Angle.Windows.Natives": "2.1.25547.20250602"
         }
       },
       "Avalonia.X11": {
         "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "P0Mt4dv7VP9xShEiPwiqg7IyebKQg5q337Ce73Glk7NrKvk1ljqTKdhxZ4ZVMISYKVlNjqZEPNa7/PTB4wer/Q==",
+        "resolved": "12.1.999-cibuild0064826-alpha",
+        "contentHash": "M6u0n0gQQmHLRPPEJOpTM1b9e3Zh0072Sx9hlsIcErdL0o7gIeHpb71vaOQCOHN7XxPeq2RnbPp7nwFX7WGfJA==",
         "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.FreeDesktop": "12.0.999-cibuild0059760-alpha",
-          "Avalonia.Skia": "12.0.999-cibuild0059760-alpha"
+          "Avalonia": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.FreeDesktop": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.FreeDesktop.AtSpi": "12.1.999-cibuild0064826-alpha",
+          "Avalonia.Skia": "12.1.999-cibuild0064826-alpha"
         }
       },
       "FSharp.Core": {
         "type": "Transitive",
-        "resolved": "9.0.303",
-        "contentHash": "6JlV8aD8qQvcmfoe/PMOxCHXc0uX4lR23u0fAyQtnVQxYULLoTZgwgZHSnRcuUHOvS3wULFWcwdnP1iwslH60g=="
+        "resolved": "10.0.100",
+        "contentHash": "c/r6T/HE9MWL0O0OispLtaKhVwDsiYQlLS249LoxSo1HNH/wfc0f5DE4pI6WpTXkCEdeXa66K5f9FmKLr/0cmw=="
       },
       "HarfBuzzSharp": {
         "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "tLZN66oe/uiRPTZfrCU4i8ScVGwqHNh5MHrXj0yVf4l7Mz0FhTGnQ71RGySROTmdognAs0JtluHkL41pIabWuQ==",
+        "resolved": "8.3.1.3",
+        "contentHash": "NGZ2+ZVNPM+NdHB/asW0/ykWngyHWwcqjrbN2nDeH1B/aptPGlCUl8wkQ2cSJxw5fdWgdmIPmNuTPWpLwNVXWg==",
         "dependencies": {
-          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1",
-          "HarfBuzzSharp.NativeAssets.macOS": "8.3.1.1"
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.3",
+          "HarfBuzzSharp.NativeAssets.macOS": "8.3.1.3"
         }
       },
       "HarfBuzzSharp.NativeAssets.Linux": {
         "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "3EZ1mpIiKWRLL5hUYA82ZHteeDIVaEA/Z0rA/wU6tjx6crcAkJnBPwDXZugBSfo8+J3EznvRJf49uMsqYfKrHg=="
+        "resolved": "8.3.1.3",
+        "contentHash": "RI6A1LgmooU30+4QIyFt5rmBCzP0VzTR+587IJSGvYIsHHWlahFufihYxtraLfsIhW7I8dn6+xX+DZGygOPKWQ=="
       },
       "HarfBuzzSharp.NativeAssets.macOS": {
         "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "jbtCsgftcaFLCA13tVKo5iWdElJScrulLTKJre36O4YQTIlwDtPPqhRZNk+Y0vv4D1gxbscasGRucUDfS44ofQ=="
+        "resolved": "8.3.1.3",
+        "contentHash": "KPTq0xnslkI6nAo0jh3ptcQPJvZZr7MWYXa2jUe4SnHc9q+JlHElmNXp0sfFoiTgoCX7WOYpYsurypuH9Gehxw=="
       },
       "HarfBuzzSharp.NativeAssets.WebAssembly": {
         "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "loJweK2u/mH/3C2zBa0ggJlITIszOkK64HLAZB7FUT670dTg965whLFYHDQo69NmC4+d9UN0icLC9VHidXaVCA=="
+        "resolved": "8.3.1.3",
+        "contentHash": "w2QfdNm9Uz/sUa0B5D+OnVQhyq3G/fBq6ibQMdWBlQqqwh0g0/5j3RFvYqZAmRZ5+RzvjVe8o8SFFnWYUSkuxA=="
       },
       "HarfBuzzSharp.NativeAssets.Win32": {
         "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "UsJtQsfAJoFDZrXc4hCUfRPMqccfKZ0iumJ/upcUjz/cmsTgVFGNEL5yaJWmkqsuFYdMWbj/En5/kS4PFl9hBA=="
+        "resolved": "8.3.1.3",
+        "contentHash": "bx8CE8Js+XGX8PUxAHCBDEORt5aaBYtMN4Hr9QFs57Xithh6yjUyYqksizH6eRDhJkwsGI+SXWmPmMm8lZC9Pw=="
       },
       "MicroCom.Runtime": {
         "type": "Transitive",
-        "resolved": "0.11.0",
-        "contentHash": "MEnrZ3UIiH40hjzMDsxrTyi8dtqB5ziv3iBeeU4bXsL/7NLSal9F1lZKpK+tfBRnUoDSdtcW3KufE4yhATOMCA=="
+        "resolved": "0.11.4",
+        "contentHash": "yZ8+Lgwo+KtRI29TB2mIOEMzV+csMJ+pKZg4YHReAP3vRewWLKKeYfrBDo5FS69rWnEbCfU3sbM+ZEQr+GDLtg=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Transitive",
-        "resolved": "3.11.0",
-        "contentHash": "v/EW3UE8/lbEYHoC2Qq7AR/DnmvpgdtAMndfQNmpuIMx/Mto8L5JnuCfdBYtgvalQOtfNCnxFejxuRrryvUTsg=="
+        "resolved": "5.3.0-2.25625.1",
+        "contentHash": "4Yhh2fnu3G+J0J1lDc8WZVgMjgbynSeTfkl5IFJMFrmiIO0sc7Tjx+f3sFVV8Sd35PrIUWfof0RWc3lAMl7Azg=="
       },
       "Microsoft.CodeAnalysis.Common": {
         "type": "Transitive",
-        "resolved": "4.14.0",
-        "contentHash": "PC3tuwZYnC+idaPuoC/AZpEdwrtX7qFpmnrfQkgobGIWiYmGi5MCRtl5mx6QrfMGQpK78X2lfIEoZDLg/qnuHg==",
+        "resolved": "5.3.0",
+        "contentHash": "uC0qk3jzTQY7i90ehfnCqaOZpBUGJyPMiHJ3c0jOb8yaPBjWzIhVdNxPbeVzI74DB0C+YgBKPLqUkgFZzua5Mg==",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "System.Collections.Immutable": "9.0.0",
-          "System.Reflection.Metadata": "9.0.0"
+          "Microsoft.CodeAnalysis.Analyzers": "5.3.0-2.25625.1"
         }
       },
       "Microsoft.CodeAnalysis.CSharp": {
         "type": "Transitive",
-        "resolved": "4.14.0",
-        "contentHash": "568a6wcTivauIhbeWcCwfWwIn7UV7MeHEBvFB2uzGIpM2OhJ4eM/FZ8KS0yhPoNxnSpjGzz7x7CIjTxhslojQA==",
+        "resolved": "5.3.0",
+        "contentHash": "SQFNGQF4f7UfDXKxMzzGNMr3fjrPDIjLfmRvvVgDCw+dyvEHDaRfHuKA5q0Pr0/JW0Gcw89TxrxrS/MjwBvluQ==",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
-          "System.Collections.Immutable": "9.0.0",
-          "System.Reflection.Metadata": "9.0.0"
+          "Microsoft.CodeAnalysis.Analyzers": "5.3.0-2.25625.1",
+          "Microsoft.CodeAnalysis.Common": "[5.3.0]"
         }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Transitive",
+        "resolved": "8.0.0",
+        "contentHash": "cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg=="
+      },
+      "Microsoft.Extensions.Logging.Abstractions": {
+        "type": "Transitive",
+        "resolved": "8.0.0",
+        "contentHash": "arDBqTgFCyS0EvRV7O3MZturChstm50OJ0y9bDJvAcmEPJm0FFpFyjU/JLYyStNGGey081DvnQYlncNX5SJJGA==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        }
+      },
+      "Microsoft.IO.RecyclableMemoryStream": {
+        "type": "Transitive",
+        "resolved": "3.0.1",
+        "contentHash": "s/s20YTVY9r9TPfTrN5g8zPF1YhwxyqO6PxUkrYTGI2B+OGPe9AdajWZrLhFqXIvqIW23fnUE4+ztrUWNU1+9g=="
       },
       "SkiaSharp": {
         "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "gR9yVoOta2Mc1Rxt15LD65AckfHMfwjIs/3kkD59C9bT2nYYISsE6uz3t4aMPNHA6CgsIL0Ssn+jE5OVilZ1yw==",
+        "resolved": "3.119.3-preview.1.1",
+        "contentHash": "+3ndwD845G4jfuyhtg5rrjryh2mEOr2QfAPFtncvAsRLzGX0ferSJ0223av6Sbw9zsEL6Wk0sk/DrXtEpJoo5A==",
         "dependencies": {
-          "SkiaSharp.NativeAssets.Win32": "3.119.0",
-          "SkiaSharp.NativeAssets.macOS": "3.119.0"
+          "SkiaSharp.NativeAssets.Win32": "3.119.3-preview.1.1",
+          "SkiaSharp.NativeAssets.macOS": "3.119.3-preview.1.1"
         }
       },
       "SkiaSharp.NativeAssets.Linux": {
         "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "oBvfueHtYGTmVHkVebZ6lMYN5nCXR/eN5e7a9VGHca1Z0bt8G5QGLtsjPA+hJ30ZK2wq3i02Zoej2aZDIpvcHA=="
+        "resolved": "3.119.3-preview.1.1",
+        "contentHash": "ZvpglyfQzhVIUmnPGngliPYcg6ROJNs0BV7XwJ+kktdqY0qe8jifP+UUgaMqTlOTjvuvyCbV7AI4qIBUfRe3Vw=="
       },
       "SkiaSharp.NativeAssets.macOS": {
         "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "YE1vNn0Nyw2PWtv7hw1PYkKJO0itFiQp9vSqGppZUKzQJqwp28a2jgdCMPfYtOiR8KCnDgZqQoynqJRRaE2ZVg=="
+        "resolved": "3.119.3-preview.1.1",
+        "contentHash": "rv8B3OxG5PGQVxudIPV+ppjqUkt98VRzczNV3qNtearHebWXIcelpHEWzCtMSAYBm1rIsTs+KKAQv8/1exr0kQ=="
       },
       "SkiaSharp.NativeAssets.WebAssembly": {
         "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "nHna8C+bi8GGwx1DTRAyoJ5GOAaK9qzojj9Q7Dhh6FiSfnt/psWzEfe39/RYqdzc15+xcm02UTvp5FwsOPk7Kw=="
+        "resolved": "3.119.3-preview.1.1",
+        "contentHash": "Gzvr/fcJZODWNoLVBAIiM8NKudvZ9yL6WHb87fk7iadio9BWQR7GS0fUvWvE3kYaRAAutsjPdGAnkDR0ujlVDw=="
       },
       "SkiaSharp.NativeAssets.Win32": {
         "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "IwC9yx36lOdXVT2DjgmWHl1qkVspfj8ctd4+li8CNnvqdfaTolXCOh6TLznURcPAvzatx9K/tLOB7zT6T8EA9w=="
-      },
-      "System.Collections.Immutable": {
-        "type": "Transitive",
-        "resolved": "9.0.0",
-        "contentHash": "QhkXUl2gNrQtvPmtBTQHb0YsUrDiDQ2QS09YbtTTiSjGcf7NBqtYbrG/BE06zcBPCKEwQGzIv13IVdXNOSub2w=="
-      },
-      "System.IO.Pipelines": {
-        "type": "Transitive",
-        "resolved": "8.0.0",
-        "contentHash": "FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA=="
-      },
-      "System.Reflection.Metadata": {
-        "type": "Transitive",
-        "resolved": "9.0.0",
-        "contentHash": "ANiqLu3DxW9kol/hMmTWbt3414t9ftdIuiIU7j80okq2YzAueo120M442xk1kDJWtmZTqWQn7wHDvMRipVOEOQ==",
-        "dependencies": {
-          "System.Collections.Immutable": "9.0.0"
-        }
+        "resolved": "3.119.3-preview.1.1",
+        "contentHash": "PkMb1pGPBSW3ZL0IVKP9DZs+w065HVs4jGQELsbkmKzKSL5P8KHLkrrmnv2XpFpXtx2njOllB8243N1dBMK+CQ=="
       },
       "Tmds.DBus.Protocol": {
         "type": "Transitive",
-        "resolved": "0.21.2",
-        "contentHash": "ScSMrUrrw8px4kK1Glh0fZv/HQUlg1078bNXNPfRPKQ3WbRzV9HpsydYEOgSoMK5LWICMf2bMwIFH0pGjxjcMA==",
-        "dependencies": {
-          "System.IO.Pipelines": "8.0.0"
-        }
-      },
-      "YY-Thunks": {
-        "type": "Transitive",
-        "resolved": "1.1.7",
-        "contentHash": "bDQy838RRo5ReTU1FOarGqkmWcnjOFYF5j2s0sT1V/E/0vcAHGgEYBeHgUwVmgvxZt7Ba6dM8EPVtX6UqXfdSQ=="
+        "resolved": "0.92.0",
+        "contentHash": "h7IMakm0PF2jxiagoysoAjrzzLQ0UBdnSXQL5kb17YW0Fvyo12Tg96A99QkzwktWRrd7H+Uw9EzjasNLUfGYlA=="
       },
       "messengergenerator": {
         "type": "Project",
         "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp": "[4.14.0, )"
+          "Microsoft.CodeAnalysis.CSharp": "[5.3.0, )"
         }
       },
       "models": {
         "type": "Project",
         "dependencies": {
-          "FSharp.Core": "[9.0.303, )"
+          "FSharp.Core": "[10.0.100, )"
         }
-      }
-    },
-    "net8.0-windows7.0/win-x64": {
-      "2ndLAB.ANGLE.Static": {
-        "type": "Direct",
-        "requested": "[7151.0.0-10.0.26100.0-1.79e529b, )",
-        "resolved": "7151.0.0-10.0.26100.0-1.79e529b",
-        "contentHash": "cPdqpUTDLk6HugiXi8NHvtjkNqO5yOa530xcZMmVNnEHqLWnfxZvsGyD3Z0FQBqtl6lJ5tD6foLBpU2wIzwreg=="
-      },
-      "2ndLAB.SkiaSharp.Static": {
-        "type": "Direct",
-        "requested": "[3.119.0-10.0.26100.0-1.1c7d845, )",
-        "resolved": "3.119.0-10.0.26100.0-1.1c7d845",
-        "contentHash": "Pjl5X7qWQf3AHOCWVJkEzqd6T2yXYJF2f0rMOyPGhgiP+dWx3WNzQ/TCbUhbB+w+GidkvVZ6PUOMnlZYODp7lw=="
-      },
-      "Microsoft.DotNet.ILCompiler": {
-        "type": "Direct",
-        "requested": "[8.0.20, )",
-        "resolved": "8.0.20",
-        "contentHash": "BnTvC6mpQ4rKzKzRpHb1M2SxsNGn6FiSa7xaJenuwXjmDqCAZWZg5noPnBtCqPTXYu8ng3FSIeVq9OY87bgLzw==",
-        "dependencies": {
-          "runtime.win-x64.Microsoft.DotNet.ILCompiler": "8.0.20"
-        }
-      },
-      "Avalonia.Angle.Windows.Natives": {
-        "type": "Transitive",
-        "resolved": "2.1.25547.20250602",
-        "contentHash": "ZL0VLc4s9rvNNFt19Pxm5UNAkmKNylugAwJPX9ulXZ6JWs/l6XZihPWWTyezaoNOVyEPU8YbURtW7XMAtqXH5A=="
-      },
-      "Avalonia.Native": {
-        "type": "Transitive",
-        "resolved": "12.0.999-cibuild0059760-alpha",
-        "contentHash": "p9neoXKP1Rp/MnACb5S3yY7EYlC0rgQ34/65cKG/vEWQtuvc6Hsz0es1ZUA9lO01K/TGTAB7S5/FUIpo7oGhgA==",
-        "dependencies": {
-          "Avalonia": "12.0.999-cibuild0059760-alpha"
-        }
-      },
-      "HarfBuzzSharp.NativeAssets.Linux": {
-        "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "3EZ1mpIiKWRLL5hUYA82ZHteeDIVaEA/Z0rA/wU6tjx6crcAkJnBPwDXZugBSfo8+J3EznvRJf49uMsqYfKrHg=="
-      },
-      "HarfBuzzSharp.NativeAssets.macOS": {
-        "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "jbtCsgftcaFLCA13tVKo5iWdElJScrulLTKJre36O4YQTIlwDtPPqhRZNk+Y0vv4D1gxbscasGRucUDfS44ofQ=="
-      },
-      "HarfBuzzSharp.NativeAssets.Win32": {
-        "type": "Transitive",
-        "resolved": "8.3.1.1",
-        "contentHash": "UsJtQsfAJoFDZrXc4hCUfRPMqccfKZ0iumJ/upcUjz/cmsTgVFGNEL5yaJWmkqsuFYdMWbj/En5/kS4PFl9hBA=="
-      },
-      "runtime.win-x64.Microsoft.DotNet.ILCompiler": {
-        "type": "Transitive",
-        "resolved": "8.0.20",
-        "contentHash": "46kekfSrZ6q6e814SVIPLrnbMXRN/nqisHFoJVgCGczKO2U+9p/tgp78/huHyZh2tVGGnFXCePFKeZ254iUfCA=="
-      },
-      "SkiaSharp.NativeAssets.Linux": {
-        "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "oBvfueHtYGTmVHkVebZ6lMYN5nCXR/eN5e7a9VGHca1Z0bt8G5QGLtsjPA+hJ30ZK2wq3i02Zoej2aZDIpvcHA=="
-      },
-      "SkiaSharp.NativeAssets.macOS": {
-        "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "YE1vNn0Nyw2PWtv7hw1PYkKJO0itFiQp9vSqGppZUKzQJqwp28a2jgdCMPfYtOiR8KCnDgZqQoynqJRRaE2ZVg=="
-      },
-      "SkiaSharp.NativeAssets.Win32": {
-        "type": "Transitive",
-        "resolved": "3.119.0",
-        "contentHash": "IwC9yx36lOdXVT2DjgmWHl1qkVspfj8ctd4+li8CNnvqdfaTolXCOh6TLznURcPAvzatx9K/tLOB7zT6T8EA9w=="
       }
     }
   }
