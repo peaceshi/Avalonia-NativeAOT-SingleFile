@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:viewModels="using:Avalonia_NativeAOT_SingleFile.ViewModels"
         x:DataType="viewModels:MainWindowViewModel">
@@ -25,8 +25,8 @@
         <Setter Property="MinHeight" Value="{Binding MinWindowHeight }" />
         <Setter Property="MinWidth" Value="{Binding MinWindowWidth }" />
         <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
-        <Setter Property="SystemDecorations" Value="BorderOnly" />
-        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />
+<!--        <Setter Property="SystemDecorations" Value="BorderOnly" />
+        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />-->
         <Setter Property="WindowStartupLocation" Value="CenterScreen" />
     </Style>
     <Style Selector="Window.AboutWindowStyle">
@@ -35,8 +35,8 @@
         <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
         <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
         <Setter Property="CanResize" Value="False" />
-        <Setter Property="SystemDecorations" Value="BorderOnly" />
-        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />
+<!--        <Setter Property="SystemDecorations" Value="BorderOnly" />
+        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />-->
         <Setter Property="WindowStartupLocation" Value="CenterScreen" />
     </Style>
     <Style Selector="Button.IconButton">
