@@ -24,9 +24,6 @@ public partial class App : Application
 {
     public override void OnFrameworkInitializationCompleted()
     {
-        // TODO: Find a way to remove the DataValidators plugin because it causes issues with NativeAOT.
-        // BindingPlugins.DataValidators.RemoveAt(0);
-        // MessengerRegistrations.RegisterAll();
         var mainWindowViewModel = new MainWindowViewModel();
         MessengerRegistrations.RegisterHandleDialogResult(mainWindowViewModel);
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
