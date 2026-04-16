@@ -28,7 +28,7 @@ jobs:
         working-directory: ${{github.workspace}}
         shell: bash
         run: |
-          curl -OL https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-win64.zip
+          curl -OL https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-win64.zip
           7z e -y ./*.zip -o"."
           mkdir msix && cd msix
           curl -OL https://github.com/user-attachments/files/23363995/appxmanifest.xml
@@ -42,7 +42,7 @@ jobs:
         run: |
           msbuild /m /t:restore Avalonia-NativeAOT-SingleFile.sln /p:Configuration=Release /p:Platform="Any CPU"
           dotnet publish Avalonia-NativeAOT-SingleFile\Avalonia-NativeAOT-SingleFile.csproj -r win-x64 -c Release
-          mv Avalonia-NativeAOT-SingleFile\bin\x64\Release\net8.0-windows\win-x64\native\* .
+          mv Avalonia-NativeAOT-SingleFile\bin\x64\Release\net10.0-windows\win-x64\native\* .
 
       - name: Package
         working-directory: ${{github.workspace}}
