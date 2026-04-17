@@ -1,13 +1,17 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=System.Runtime">
     <Design.PreviewWith>
         <Border Padding="20">
-            <StackPanel Spacing="20">
+            <StackPanel Spacing="20" Orientation="Horizontal">
                 <Grid>
                     <TextBlock Text="&#xEB52;" FontSize="16" FontFamily="Segoe Fluent Icons" Foreground="#C72335" />
                     <TextBlock Text="&#xEB51;" FontSize="16" FontFamily="Segoe Fluent Icons" />
                 </Grid>
+                <TextBlock Text="="/>
+                <TextBlock Text="&#xEB52;" FontSize="16" FontFamily="Segoe Fluent Icons" Foreground="#C72335" />
+                <TextBlock Text="+"/>
+                <TextBlock Text="&#xEB51;" FontSize="16" FontFamily="Segoe Fluent Icons" />
             </StackPanel>
         </Border>
     </Design.PreviewWith>
