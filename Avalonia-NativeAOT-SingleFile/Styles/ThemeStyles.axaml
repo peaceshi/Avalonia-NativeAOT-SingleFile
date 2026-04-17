@@ -25,15 +25,14 @@
         <Setter Property="MinHeight" Value="{Binding MinWindowHeight }" />
         <Setter Property="MinWidth" Value="{Binding MinWindowWidth }" />
         <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
-<!--        <Setter Property="SystemDecorations" Value="BorderOnly" />
-        <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />-->
+        <Setter Property="WindowDecorations" Value="Full" />
         <Setter Property="WindowStartupLocation" Value="CenterScreen" />
     </Style>
     <Style Selector="Window.AboutWindowStyle">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="48" />
         <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
-        <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
+        <Setter Property="TransparencyLevelHint" Value="Mica,AcrylicBlur" />
         <Setter Property="CanResize" Value="False" />
 <!--        <Setter Property="SystemDecorations" Value="BorderOnly" />
         <Setter Property="ExtendClientAreaChromeHints" Value="PreferSystemChrome" />-->
@@ -51,5 +50,8 @@
         <Setter Property="CompactPaneLength" Value="{Binding TitleBarHeight}" />
         <Setter Property="OpenPaneLength" Value="{Binding OpenPaneLength}" />
         <Setter Property="PaneBackground" Value="Transparent" />
+    </Style>
+    <Style Selector="WindowDrawnDecorations /template/ Panel#PART_TitleTextPanel > TextBlock">
+        <Setter Property="IsVisible" Value="False" />
     </Style>
 </Styles>
