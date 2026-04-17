@@ -12,6 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="/Assets/ThemeDictionary.axaml" />
                 <MergeResourceInclude Source="/Assets/FontIcons.axaml" />
+                <MergeResourceInclude Source="/Assets/WindowDrawnDecorations.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
