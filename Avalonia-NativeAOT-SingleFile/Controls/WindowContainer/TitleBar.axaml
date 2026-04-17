@@ -1,4 +1,4 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -9,14 +9,17 @@
     <Design.DataContext>
         <viewModels:MainWindowViewModel />
     </Design.DataContext>
-    <StackPanel Classes="WindowContainerTitleBarStyle">
-        <Panel Width="{Binding TitleBarHeight}" Height="{Binding TitleBarHeight}">
+    <StackPanel Orientation="Horizontal" WindowDecorationProperties.ElementRole="TitleBar">
+        <Panel Width="{Binding TitleBarHeight}" WindowDecorationProperties.ElementRole="User" Height="{Binding TitleBarHeight}">
             <!-- TODO: Button disabled style not working by Avalonia -->
             <Button Classes="IconButton" Command="{Binding NavigateBackCommand}"
                     Content="{StaticResource Back}"
                     IsEnabled="{Binding IsNavigateBackEnabled}" />
         </Panel>
-        <Image Source="/Assets/avalonia-logo.ico" Width="20" Height="20" Margin="14" />
-        <TextBlock Text="{Binding Greeting}" VerticalAlignment="Center" Margin="10" />
+        <StackPanel Classes="WindowContainerTitleBarStyle">
+            <Image Source="/Assets/avalonia-logo.ico" Width="20" Height="20" Margin="14" />
+            <TextBlock Text="{Binding Greeting}" VerticalAlignment="Center" Margin="10" />
+        </StackPanel>
     </StackPanel>
+
 </UserControl>
