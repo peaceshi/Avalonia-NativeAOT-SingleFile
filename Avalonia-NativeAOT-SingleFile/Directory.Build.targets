@@ -1,0 +1,4 @@
+<Project>
+    <Import Project="Build\GenerateMergedResources.targets" />
+    <Import Project="Build\GenerateMergedStyles.targets" />
+</Project>

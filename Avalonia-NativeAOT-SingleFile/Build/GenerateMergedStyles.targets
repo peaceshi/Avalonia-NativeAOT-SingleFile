@@ -1,0 +1,36 @@
+<Project>
+    <Target Name="GenerateMergedStyles" BeforeTargets="BeforeBuild">
+        <PropertyGroup>
+            <GeneratedAxamlPath>$(MSBuildProjectDirectory)\Generated\GeneratedStyles.axaml</GeneratedAxamlPath>
+            <GeneratedAxamlDir>$(MSBuildProjectDirectory)\Generated</GeneratedAxamlDir>
+        </PropertyGroup>
+
+        <MakeDir Directories="$(GeneratedAxamlDir)"
+                 Condition="!Exists('$(GeneratedAxamlDir)')" />
+
+        <ItemGroup>
+            <StylesResourceAxaml Include="$(MSBuildProjectDirectory)\Styles\**\*.axaml"
+                              Exclude="$(GeneratedAxamlPath)" />
+        </ItemGroup>
+
+        <PropertyGroup>
+            <MergedContent>
+                <![CDATA[<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+@(StylesResourceAxaml->'    <StyleInclude Source="/Styles/%(RecursiveDir)%(FileName)%(Extension)"/>', '
+')
+</Styles>]]>
+            </MergedContent>
+        </PropertyGroup>
+
+        <WriteLinesToFile File="$(GeneratedAxamlPath)"
+                          Lines="$(MergedContent)"
+                          Overwrite="true" />
+
+        <ItemGroup>
+            <AvaloniaResource Include="$(GeneratedAxamlPath)" />
+        </ItemGroup>
+
+        <Message Text="Generated merged styles file: $(GeneratedAxamlPath)" Importance="high" />
+    </Target>
+</Project>

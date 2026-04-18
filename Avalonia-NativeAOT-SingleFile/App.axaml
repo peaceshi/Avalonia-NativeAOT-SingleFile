@@ -5,14 +5,12 @@
              RequestedThemeVariant="Default">
     <Application.Styles>
         <FluentTheme />
-        <StyleInclude Source="/Styles/ThemeStyles.axaml" />
+        <StyleInclude Source="/Generated/GeneratedStyles.axaml" />
     </Application.Styles>
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <MergeResourceInclude Source="/Assets/ThemeDictionary.axaml" />
-                <MergeResourceInclude Source="/Assets/FontIcons.axaml" />
-                <MergeResourceInclude Source="/Assets/WindowDrawnDecorations.axaml" />
+                <MergeResourceInclude Source="/Generated/GeneratedResources.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

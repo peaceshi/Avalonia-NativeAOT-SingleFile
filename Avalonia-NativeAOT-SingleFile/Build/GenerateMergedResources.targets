@@ -1,0 +1,38 @@
+<Project>
+    <Target Name="GenerateMergedResources" BeforeTargets="BeforeBuild">
+        <PropertyGroup>
+            <GeneratedAxamlPath>$(MSBuildProjectDirectory)\Generated\GeneratedResources.axaml</GeneratedAxamlPath>
+            <GeneratedAxamlDir>$(MSBuildProjectDirectory)\Generated</GeneratedAxamlDir>
+        </PropertyGroup>
+
+        <MakeDir Directories="$(GeneratedAxamlDir)"
+                 Condition="!Exists('$(GeneratedAxamlDir)')" />
+
+        <ItemGroup>
+            <ResourceDictionaryAxaml Include="$(MSBuildProjectDirectory)\Assets\**\*.axaml"
+                                     Exclude="$(GeneratedAxamlPath)" />
+        </ItemGroup>
+
+        <PropertyGroup>
+            <MergedContent>
+                <![CDATA[<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+@(ResourceDictionaryAxaml->'    <MergeResourceInclude Source="/Assets/%(RecursiveDir)%(FileName)%(Extension)"/>', '
+')
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>]]>
+            </MergedContent>
+        </PropertyGroup>
+
+        <WriteLinesToFile File="$(GeneratedAxamlPath)"
+                          Lines="$(MergedContent)"
+                          Overwrite="true" />
+
+        <ItemGroup>
+            <AvaloniaResource Include="$(GeneratedAxamlPath)" />
+        </ItemGroup>
+
+        <Message Text="Generated merged resources file: $(GeneratedAxamlPath)" Importance="high" />
+    </Target>
+</Project>
