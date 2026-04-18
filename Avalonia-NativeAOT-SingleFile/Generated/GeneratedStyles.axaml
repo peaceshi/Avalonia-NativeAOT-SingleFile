@@ -1,0 +1,11 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="/Styles/Button\IconButton.axaml"/>
+    <StyleInclude Source="/Styles/Panel\WindowContainerContentStyle.axaml"/>
+    <StyleInclude Source="/Styles/Panel\WindowContainerTitleBarStyle.axaml"/>
+    <StyleInclude Source="/Styles/Styles1.axaml"/>
+    <StyleInclude Source="/Styles/ThemeStyles.axaml"/>
+    <StyleInclude Source="/Styles/View\WindowContainerSplitViewStyle.axaml"/>
+    <StyleInclude Source="/Styles/Window\AboutWindowStyle.axaml"/>
+    <StyleInclude Source="/Styles/Window\MainWindowStyle.axaml"/>
+</Styles>

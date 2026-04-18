@@ -7,8 +7,13 @@
             <!-- Add Controls for Previewer Here -->
         </Border>
     </Design.PreviewWith>
+
     <!-- Add Styles Here -->
-    <Style Selector="WindowDrawnDecorations /template/ Panel#PART_TitleTextPanel > TextBlock">
-        <Setter Property="IsVisible" Value="False" />
+    <Style Selector="SplitView.WindowContainerSplitViewStyle">
+        <Setter Property="IsPaneOpen" Value="{Binding IsPaneOpen}" />
+        <Setter Property="DisplayMode" Value="CompactInline" />
+        <Setter Property="CompactPaneLength" Value="{Binding TitleBarHeight}" />
+        <Setter Property="OpenPaneLength" Value="{Binding OpenPaneLength}" />
+        <Setter Property="PaneBackground" Value="Transparent" />
     </Style>
 </Styles>

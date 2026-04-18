@@ -1,0 +1,20 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="using:Avalonia_NativeAOT_SingleFile.ViewModels"
+        x:DataType="viewModels:MainWindowViewModel">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith>
+
+    <Style Selector="Window.MainWindowStyle">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="{Binding TitleBarHeight}" />
+        <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
+        <Setter Property="MinHeight" Value="{Binding MinWindowHeight }" />
+        <Setter Property="MinWidth" Value="{Binding MinWindowWidth }" />
+        <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
+        <Setter Property="WindowStartupLocation" Value="CenterScreen" />
+    </Style>
+</Styles>
