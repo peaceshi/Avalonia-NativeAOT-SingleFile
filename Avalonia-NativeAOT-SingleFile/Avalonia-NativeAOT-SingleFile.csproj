@@ -16,10 +16,6 @@
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     </PropertyGroup>
 
-    <ItemGroup Label="TrimmerRootConfiguration" Condition="'$(Configuration)'=='Release'">
-        <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
-    </ItemGroup>
-
     <Import Project="Build\NativeAOT.props" />
 
     <ItemGroup>
