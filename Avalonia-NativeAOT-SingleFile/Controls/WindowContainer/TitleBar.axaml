@@ -10,8 +10,8 @@
         <viewModels:MainWindowViewModel />
     </Design.DataContext>
     <StackPanel Orientation="Horizontal" WindowDecorationProperties.ElementRole="TitleBar">
-        <Panel Width="{Binding TitleBarHeight}" WindowDecorationProperties.ElementRole="User" Height="{Binding TitleBarHeight}">
-            <!-- TODO: Button disabled style not working by Avalonia -->
+        <Panel Width="{Binding TitleBarHeight}" WindowDecorationProperties.ElementRole="User"
+               Height="{Binding TitleBarHeight}">
             <Button Classes="IconButton" Command="{Binding NavigateBackCommand}"
                     Content="{StaticResource Back}"
                     IsEnabled="{Binding IsNavigateBackEnabled}" />
@@ -19,7 +19,14 @@
         <StackPanel Classes="WindowContainerTitleBarStyle">
             <Image Source="/Assets/avalonia-logo.ico" Width="20" Height="20" Margin="14" />
             <TextBlock Text="{Binding Greeting}" VerticalAlignment="Center" Margin="10" />
+
         </StackPanel>
+        <Panel Width="{Binding TitleBarHeight}" WindowDecorationProperties.ElementRole="User"
+               Height="{Binding TitleBarHeight}">
+            <ToggleButton Classes="IconButton" IsChecked="{Binding IsDarkMode}">
+                <Label Content="{StaticResource Light}" />
+            </ToggleButton>
+        </Panel>
     </StackPanel>
 
 </UserControl>

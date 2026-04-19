@@ -20,4 +20,5 @@
     <system:String x:Key='Back'>&#xE72B;</system:String>
     <system:String x:Key='Home'>&#xE80F;</system:String>
     <system:String x:Key='Info'>&#xE946;</system:String>
+    <system:String x:Key='Light'>&#xE793;</system:String>
 </ResourceDictionary>

@@ -14,7 +14,7 @@
         <Setter Property="ExtendClientAreaToDecorationsHint" Value="True" />
         <Setter Property="MinHeight" Value="{Binding MinWindowHeight }" />
         <Setter Property="MinWidth" Value="{Binding MinWindowWidth }" />
-        <Setter Property="TransparencyLevelHint" Value="AcrylicBlur" />
+        <Setter Property="TransparencyLevelHint" Value="Mica,AcrylicBlur" />
         <Setter Property="WindowStartupLocation" Value="CenterScreen" />
     </Style>
 </Styles>
