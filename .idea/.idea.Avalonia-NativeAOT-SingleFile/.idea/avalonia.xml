@@ -30,6 +30,7 @@
         <entry key="Avalonia-NativeAOT-SingleFile/Views/MainWindow.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Views/WelcomePage.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Views/WindowContainer.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="MinimalAotSample/App.axaml" value="MinimalAotSample/MinimalAotSample.csproj" />
       </map>
     </option>
   </component>
