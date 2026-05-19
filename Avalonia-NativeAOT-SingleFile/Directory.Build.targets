@@ -1,4 +1,3 @@
 <Project>
-    <Import Project="Build\GenerateMergedResources.targets" />
-    <Import Project="Build\GenerateMergedStyles.targets" />
+    <Import Project="Build\GenerateAvaloniaResources.targets" />
 </Project>

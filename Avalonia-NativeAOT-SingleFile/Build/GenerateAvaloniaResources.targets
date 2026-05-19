@@ -1,0 +1,55 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <GeneratedAxamlOutputDir Condition="'$(GeneratedAxamlOutputDir)' == ''">$(MSBuildProjectDirectory)\Generated\</GeneratedAxamlOutputDir>
+        <ResourcesScanPattern Condition="'$(ResourcesScanPattern)' == ''">Assets\**\*.axaml</ResourcesScanPattern>
+        <StylesScanPattern Condition="'$(StylesScanPattern)' == ''">Styles\**\*.axaml</StylesScanPattern>
+        <GeneratedResourcesFileName Condition="'$(GeneratedResourcesFileName)' == ''">GeneratedResources.axaml</GeneratedResourcesFileName>
+        <GeneratedStylesFileName Condition="'$(GeneratedStylesFileName)' == ''">GeneratedStyles.axaml</GeneratedStylesFileName>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <_Indent>$([System.String]::new(' ', 4))</_Indent>
+        <_ResourcesTemplatePath>$(MSBuildThisFileDirectory)Templates\GeneratedResources.template</_ResourcesTemplatePath>
+        <_StylesTemplatePath>$(MSBuildThisFileDirectory)Templates\GeneratedStyles.template</_StylesTemplatePath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ResourcesScanItem Include="$(ResourcesScanPattern)" Exclude="$(GeneratedAxamlOutputDir)"/>
+        <StylesScanItem Include="$(StylesScanPattern)" Exclude="$(GeneratedAxamlOutputDir)"/>
+    </ItemGroup>
+
+    <Target Name="GenerateMergedAvaloniaResources"
+            BeforeTargets="BeforeCompile;CoreCompile">
+
+        <MakeDir Directories="$(GeneratedAxamlOutputDir)"/>
+
+        <PropertyGroup>
+            <_ResourcesTemplateText>$([System.IO.File]::ReadAllText('$(_ResourcesTemplatePath)'))</_ResourcesTemplateText>
+            <_StylesTemplateText>$([System.IO.File]::ReadAllText('$(_StylesTemplatePath)'))</_StylesTemplateText>
+        </PropertyGroup>
+
+        <PropertyGroup>
+            <_ResourceItems>@(ResourcesScanItem->'$(_Indent)$(_Indent)&lt;MergeResourceInclude Source="\%(Identity)" /&gt;', '%0A')</_ResourceItems>
+        </PropertyGroup>
+
+        <PropertyGroup>
+            <_StyleItems>@(StylesScanItem->'$(_Indent)&lt;StyleInclude Source="\%(Identity)" /&gt;', '%0A')</_StyleItems>
+        </PropertyGroup>
+
+        <PropertyGroup>
+            <_FinalResourcesContent>$(_ResourcesTemplateText.Replace('{{RESOURCE_DICTIONARIES}}', $(_ResourceItems)))</_FinalResourcesContent>
+            <_FinalStylesContent>$(_StylesTemplateText.Replace('{{STYLE_INCLUDES}}', $(_StyleItems)))</_FinalStylesContent>
+        </PropertyGroup>
+
+        <WriteLinesToFile File="$(GeneratedAxamlOutputDir)$(GeneratedResourcesFileName)" Lines="$(_FinalResourcesContent)" Overwrite="true" Encoding="UTF-8"/>
+        <WriteLinesToFile File="$(GeneratedAxamlOutputDir)$(GeneratedStylesFileName)" Lines="$(_FinalStylesContent)" Overwrite="true" Encoding="UTF-8"/>
+
+        <ItemGroup>
+            <AvaloniaResource Include="$(GeneratedAxamlOutputDir)\**\*.axaml"/>
+        </ItemGroup>
+
+        <Message Text="Generated resources written to: $(GeneratedAxamlOutputDir)$(GeneratedResourcesFileName)" Importance="high"/>
+        <Message Text="Generated styles written to:   $(GeneratedAxamlOutputDir)$(GeneratedStylesFileName)" Importance="high"/>
+    </Target>
+
+</Project>
