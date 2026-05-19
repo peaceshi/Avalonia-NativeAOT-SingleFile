@@ -9,13 +9,20 @@
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/IconFonts.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/ThemeDictionary.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Assets/ThemeStyles.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Assets/WindowDrawnDecorations.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Build/Templates/MergedResources.template.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Build/Templates/MergedStyles.template.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/AcrylicBorder.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainer/Panel.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainer/SplitView.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainer/SplitViewPane.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainer/TitleBar.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Controls/WindowContainerPanel.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Generated/GeneratedResources.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Generated/GeneratedStyles.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Styles/ThemeStyles.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Styles/Window/AboutWindowStyle.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
+        <entry key="Avalonia-NativeAOT-SingleFile/Styles/Window/MainWindowStyle.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/ThemeDictionary.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Views/AboutWindow.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
         <entry key="Avalonia-NativeAOT-SingleFile/Views/FirstPage.axaml" value="Avalonia-NativeAOT-SingleFile/Avalonia-NativeAOT-SingleFile.csproj" />
