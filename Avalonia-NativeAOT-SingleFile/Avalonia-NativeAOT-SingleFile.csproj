@@ -12,35 +12,29 @@
         <ApplicationIcon>Assets\avalonia-logo.ico</ApplicationIcon>
     </PropertyGroup>
 
-    <PropertyGroup Label="AvaloniaConfiguration">
-        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-    </PropertyGroup>
-
-    <Import Project="Build\NativeAOT.props" />
-
     <ItemGroup>
-        <AvaloniaResource Include="Assets\**" />
+        <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
     <ItemGroup Label="PackageReferences">
-        <PackageReference Include="2ndLAB.ANGLE.Static" Version="7151.0.0-10.0.26100.0-1.79e529b" />
-        <PackageReference Include="2ndLAB.SkiaSharp.Static" Version="3.119.0-10.0.26100.0-1.1c7d845" />
-        <PackageReference Include="Avalonia" Version="12.1.999-cibuild0064900-alpha" />
-        <PackageReference Include="Avalonia.Desktop" Version="12.1.999-cibuild0064900-alpha" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.999-cibuild0064900-alpha" />
-        <PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.1" />
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+        <PackageReference Include="2ndLAB.ANGLE.Static" Version="7151.0.0-10.0.26100.0-1.79e529b"/>
+        <PackageReference Include="2ndLAB.SkiaSharp.Static" Version="3.119.0-10.0.26100.0-1.1c7d845"/>
+        <PackageReference Include="Avalonia" Version="12.1.999-cibuild0065577-alpha"/>
+        <PackageReference Include="Avalonia.Desktop" Version="12.1.999-cibuild0065577-alpha"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.999-cibuild0065577-alpha"/>
+        <PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.1"/>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2"/>
         <PackageReference Include="PolySharp" Version="1.15.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="VC-LTL" Version="5.3.1" />
+        <PackageReference Include="VC-LTL" Version="5.3.1"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\MessengerGenerator\MessengerGenerator.csproj" OutputItemType="Analyzer" />
-        <ProjectReference Include="..\Models\Models.fsproj" />
-        <ProjectReference Include="..\ViewLocatorGenerator\ViewLocatorGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\MessengerGenerator\MessengerGenerator.csproj" OutputItemType="Analyzer"/>
+        <ProjectReference Include="..\Models\Models.fsproj"/>
+        <ProjectReference Include="..\ViewLocatorGenerator\ViewLocatorGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
 </Project>
